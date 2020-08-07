@@ -123,3 +123,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'blog-home'    ## redirect to 'blog-home' url after successful
+
+## where to find login route when the user access certain routes without logged in
+LOGIN_URL = 'login'                 
