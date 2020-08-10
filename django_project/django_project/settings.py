@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
@@ -127,4 +127,10 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'blog-home'    ## redirect to 'blog-home' url after successful
 
 ## where to find login route when the user access certain routes without logged in
-LOGIN_URL = 'login'                 
+LOGIN_URL = 'login'
+
+### Diectory where uploaded file will be stored ###
+## BASE_DIR specifies the location of project based directory(file will be located in this file system)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+## MEDIA_URL is the public url(how we access image in the browser , to view Image)
+MEDIA_URL = '/media/'    
